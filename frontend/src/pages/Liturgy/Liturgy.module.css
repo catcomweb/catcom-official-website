@@ -1,0 +1,164 @@
+.gridContainer {
+  display: grid;
+  height: 100vh;
+  gap: 1rem;
+  /* grid-template-rows: repeat(9, minmax(1fr, auto)); */
+  grid-template-rows: auto;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "header"
+    "readings"
+    "prayers "
+    "rosary"
+    "divine-mercy"
+    "way-of-cross"
+    "footer";
+}
+
+.header {
+  grid-area: header;
+  width: 100%;
+}
+
+.readings {
+  background-color: rgb(112, 112, 146);
+  grid-area: readings;
+  display: grid;
+  grid-template-columns: repeat(3, 0.8fr);
+  grid-template-areas:
+    "content-title content-title content-title"
+    "first-reading psalms second-reading";
+  padding: 1rem;
+}
+.contentTitle {
+  grid-area: content-title;
+  width: 100%;
+}
+.firstReading {
+  grid-area: first-reading;
+  border-right: solid 0.2rem rgb(54, 7, 7);
+  padding: 1rem;
+}
+.psalms {
+  grid-area: psalms;
+  padding: 1rem;
+  border-right: solid 0.2rem rgb(54, 7, 7);
+}
+
+.secondReading {
+  grid-area: second-reading;
+  padding: 1rem;
+}
+
+.prayers {
+  background-color: greenyellow;
+  grid-area: prayers;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto auto auto auto;
+  grid-template-areas:
+    " prayer-title prayer-title  prayer-title"
+    "sign-of-cross our-father apostles-creed"
+    "hail-mary doxology holy-queen"
+    "faith hope love"
+    "contrition offering morning"
+    "evening night meals";
+
+  gap: 10px;
+  width: 100%;
+}
+.prayerTitle {
+  grid-area: prayer-title;
+  background-color: aquamarine;
+}
+.signOfCross {
+  grid-area: sign-of-cross;
+  background-color: aquamarine;
+}
+.ourFather {
+  grid-area: our-father;
+  background-color: aquamarine;
+}
+.hailMary {
+  grid-area: hail-mary;
+  background-color: aquamarine;
+}
+.apostlesCreed {
+  grid-area: apostles-creed;
+  background-color: aquamarine;
+}
+.doxology {
+  grid-area: doxology;
+  background-color: aquamarine;
+}
+
+.holyQueen {
+  grid-area: holy-queen;
+  background-color: aquamarine;
+}
+
+.faith {
+  grid-area: faith;
+  background-color: aquamarine;
+}
+.hope {
+  grid-area: hope;
+  background-color: aquamarine;
+}
+.love {
+  grid-area: love;
+  background-color: aquamarine;
+}
+.contrition {
+  grid-area: contrition;
+  background-color: aquamarine;
+}
+.offering {
+  grid-area: offering;
+  background-color: aquamarine;
+}
+
+.morningPrayer {
+  grid-area: morning;
+  background-color: aquamarine;
+}
+
+.eveningPrayer {
+  grid-area: evening;
+  background-color: aquamarine;
+}
+
+.nightPrayer {
+  grid-area: night;
+  background-color: aquamarine;
+}
+
+.beforeMeals {
+  grid-area: meals;
+  background-color: aquamarine;
+}
+.rosary {
+  background-color: brown;
+  height: 200px;
+  grid-area: rosary;
+}
+
+.divineMercy {
+  background-color: yellow;
+  height: 200px;
+  grid-area: divine-mercy;
+}
+
+.wayOfCross {
+  background-color: orange;
+  height: 200px;
+  grid-area: way-of-cross;
+}
+
+.footer {
+  grid-area: footer;
+}
+.liturgyItem {
+  border: 1px solid black;
+  width: 100vw;
+}

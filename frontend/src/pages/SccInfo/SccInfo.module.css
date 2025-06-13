@@ -1,0 +1,145 @@
+/* Grid Container */
+.gridContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "header"
+        "title"
+        "about"
+        "activitiesAndPhotos"
+        "PatronSaint"
+        "prayer"
+        "footer";
+    gap: 20px;
+    min-height: 100vh;
+    width: 100%; /* Ensure it takes full width */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header Section */
+.header {
+    grid-area: header;
+    height: auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Title Section */
+.title {
+    grid-area: title;
+    padding: 2rem;
+}
+
+/* About Section */
+.about {
+    grid-area: about;
+    padding: 2rem;
+}
+
+/* Activities and Photos Section */
+.activitiesAndPhotos {
+    grid-area: activitiesAndPhotos;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "activities photos";
+    gap : 1rem;
+    padding: 1rem;
+}
+
+.slideShow {
+  grid-area: slide-show;  
+  width: 100%;
+  margin: auto;
+  display: flex; /* Ensures children are aligned properly */
+  justify-content: center;
+  align-items: center;
+}
+.slideshowImage {
+  width: auto;
+  height: 300px;
+  object-fit: cover;
+}
+
+.sliderContainer {
+  width: 300px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.activities {
+    grid-area: activities;
+  
+}
+.activitiesList {
+    list-style-type: none;
+    padding: 0;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.photos {
+    grid-area: photos;    
+    padding: 1rem;
+}
+
+/* Patron Saint Section */
+.PatronSaint {
+    grid-area: PatronSaint;
+    padding: 2rem;
+}
+
+/* Prayer Section */
+.prayer {
+    grid-area: prayer;
+    padding: 2rem;
+}
+
+/* Footer Section */
+.footer {
+    grid-area: footer;
+    height: auto;
+}
+.title,
+.about,
+.activitiesAndPhotos,
+.PatronSaint,
+.prayer
+{
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+    box-sizing: border-box;
+     
+}
+@media screen and (max-width: 850px) {
+    .title,
+    .about,
+    .activitiesAndPhotos,
+    .PatronSaint,
+    .prayer {
+        width: 95%;
+    }
+    .activitiesAndPhotos {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "activities"
+            "photos";
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .gridContainer {
+        gap: 10px;
+    }
+    .title,
+    .about,
+    .activitiesAndPhotos,
+    .PatronSaint,
+    .prayer {
+        width: 100%;
+        padding: 1rem;
+    }
+}
