@@ -412,5 +412,20 @@ const SCCs = [
       "O Saint Romanos, the Melodist, you who were once a humble singer, but through divine grace became a master of hymnody, we humbly ask for your intercession.May your gift of song inspire us to praise God with heartfelt melodies and words, and may your example encourage us to embrace our own unique talents for the glory of God",
   },
 ];
+const Readings= [
+  {
+    title: "first reading",
+    text:"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore ipsum cum, voluptas voluptatibus, neque quae impedit asperiores rerum non aperiam, recusandae facilis necessitatibus sed voluptate expedita obcaecati quis placeat. Cupiditate pariatur facilis  dolores, repellendus laboriosam consequuntur cum quidem doloribus  facere incidunt veritatis neque deserunt, voluptatibus magnam   minus deleniti unde quibusdam!"
+    className: ""
+  },
+
+  {
+    title: "Responsorial Psalms",
+   text: " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore"
+
+
+  className: `${styles.psalms}`
+  }
+];
 
 export { images, priests, patrons, catcomExecutive, communities, SCCs };
