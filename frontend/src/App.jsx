@@ -5,7 +5,7 @@ import Liturgy from "./pages/Liturgy/Liturgy";
 import Community from "./pages/Community/Community";
 import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
-import Join from "./pages/Join-scc/Join";
+import Join from "./pages/Home/Join-scc/Join";
 import Media from "./pages/Media/Media";
 import { SCCs } from "./DataFiles/data";
 import SccInfo from "./pages/SccInfo/SccInfo";
