@@ -73,3 +73,12 @@ CREATE TABLE executive_leaders (
     exec_description VARCHAR(255),
     image_url VARCHAR(255)
 );
+
+CREATE TABLE users (
+  user_id SERIAL PRIMARY KEY,
+  full_name VARCHAR(100) NOT NULL,  
+  role VARCHAR(50),
+  email VARCHAR(100) UNIQUE NOT NULL,
+  password TEXT NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
