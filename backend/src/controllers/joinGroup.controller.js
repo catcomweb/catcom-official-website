@@ -1,7 +1,7 @@
 // import {getJoinGroups, createJoinGroup} from "../services/joinGroup.service.js";
 import { getJoinGroupsServices as getJoinGroups, createJoinGroupsServices as createJoinGroup, deleteJoinGroupServices as deleteJoinGroup } from "../services/joinGroup.service.js";
 
-const getJoinGroupsController = async (req, res) => {
+const getJoinGroupController = async (req, res) => {
   try {
     const joinGroups = await getJoinGroups();
     res.json(joinGroups);
@@ -11,7 +11,7 @@ const getJoinGroupsController = async (req, res) => {
   }
 };
 
-const createJoinGroupsController = async (req, res) => {
+const createJoinGroupController = async (req, res) => {
   try {
     const joinGroup = await createJoinGroup(req.body);
     res.status(201).json(joinGroup);
@@ -19,7 +19,7 @@ const createJoinGroupsController = async (req, res) => {
     res.status(500).json({ message: "Server error: " + error.message });
   }
 };
-const deleteJoinGroupsController = async (req, res) => {
+const deleteJoinGroupController = async (req, res) => {
   try {
     const { id } = req.params;
     await deleteJoinGroup(id);
@@ -30,7 +30,7 @@ const deleteJoinGroupsController = async (req, res) => {
 };
 
 export default {
-  getJoinGroups: getJoinGroupsController,
+  getJoinGroups: getJoinGroupController,
   createJoinGroup: createJoinGroupController,
   deleteJoinGroup: deleteJoinGroupController
 };
