@@ -37,8 +37,7 @@ CREATE TABLE events (
 CREATE TYPE gender_type AS ENUM ('male', 'female', 'other');
 create table join_scc (
     user_id SERIAL PRIMARY KEY,
-    first_name varchar(50) not null,
-    last_name varchar(50) not null,
+    full_name VARCHAR(100) NOT NULL,
     phone_number varchar(15),
     email varchar(100) not null unique,
     year_joined int,

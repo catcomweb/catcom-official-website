@@ -3,7 +3,7 @@ import { createEvent, getEvents } from "../controllers/eve  nt.controller.js";
 
 const router = Router();
 
-router.get("/", getEvents);
-router.post("/", createEvent);
+router.get("/events", getEvents);
+router.post("/events", createEvent);
 
 export default router;
