@@ -7,6 +7,7 @@ import express from "express";
 import eventsRouter from "./routes/events.routes.js";
 import leadersRouter from "./routes/leaders.routes.js";
 import joinsccRouter from "./routes/joinscc.routes.js"
+import groupsRouter from "./routes/joinGroup.routes.js";
 //import { errorHandler } from "./middleware/errorHandler.js";
 import cors from "cors";
 
