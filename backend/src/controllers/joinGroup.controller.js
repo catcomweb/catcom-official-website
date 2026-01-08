@@ -11,7 +11,7 @@ const getJoinGroupsController = async (req, res) => {
   }
 };
 
-const createJoinGroupController = async (req, res) => {
+const createJoinGroupsController = async (req, res) => {
   try {
     const joinGroup = await createJoinGroup(req.body);
     res.status(201).json(joinGroup);
@@ -19,7 +19,7 @@ const createJoinGroupController = async (req, res) => {
     res.status(500).json({ message: "Server error: " + error.message });
   }
 };
-const deleteJoinGroupController = async (req, res) => {
+const deleteJoinGroupsController = async (req, res) => {
   try {
     const { id } = req.params;
     await deleteJoinGroup(id);

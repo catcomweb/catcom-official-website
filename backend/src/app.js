@@ -18,6 +18,7 @@ app.use(express.json());
 app.use("/api", eventsRouter);
 app.use("/api", leadersRouter);
 app.use("/api/scc", joinsccRouter);
+app.use("/api", groupsRouter);
 // app.use("/api", groupsRouter);
 //app.use(errorHandler);
 
