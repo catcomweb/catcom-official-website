@@ -1,13 +1,13 @@
 import db from "../config/db.config.js";
 
 export const createJoinSCC = async (data) => {      
-    const { full_name, phone_number, email, year_study, gender, scc_name } = data; 
+    const { first_name, last_name, phone_number, email, year_joined, gender, scc_name } = data; 
     const query = `
-    INSERT INTO join_scc (full_name, phone_number, email, year_study, gender, scc_name)
-    VALUES ($1, $2, $3, $4, $5, $6)
+    INSERT INTO join_scc (first_name, last_name, phone_number, email, year_joined, gender, scc_name)
+    VALUES ($1, $2, $3, $4, $5, $6, $7)
     RETURNING *
     `;
-    const values = [full_name, phone_number, email, year_study, gender, scc_name];
+    const values = [first_name, last_name, phone_number, email, year_joined, gender, scc_name];
     const result = await db.query(query, values);
     return result.rows[0];
 };
@@ -19,7 +19,8 @@ export const getJoinSCC = async () => {
     );
     return result.rows;
     } catch (error) {
-        console.log("Database Error " + error.message); 
+        console.log(`Database Error ${error.message}`);
+        throw new Error(`Failed to retrieve your records`);
     }
 };      
 

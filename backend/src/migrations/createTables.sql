@@ -57,7 +57,8 @@ create table scc_execut (
 
 CREATE TABLE groups (
     user_id SERIAL PRIMARY KEY,
-    full_name VARCHAR(100) NOT NULL,
+    first_name VARCHAR(100) NOT NULL,
+    last_name VARCHAR(100) NOT NULL,
     phone_number VARCHAR(15) NOT NULL,
     email VARCHAR(100) UNIQUE NOT NULL,
     gender VARCHAR(10) NOT NULL,
