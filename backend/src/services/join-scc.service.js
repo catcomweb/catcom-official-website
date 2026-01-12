@@ -1,10 +1,10 @@
-import * as JoinSCCModel from '../models/joinscc.model.js';
+import * as JoinSCCModel from '../models/join-scc.model.js';
 
 export const createJoinSCCServices = async (data) => {
     if (!data) {
         throw new Error("No data provided");
     }
-    if (!data.user_id || !data.full_name || !data.phone_number || !data.email || !data.year_study || !data.gender || !data.scc_name) {  
+    if (!data.first_name || !data.last_name || !data.phone_number || !data.email || !data.year_joined || !data.gender || !data.scc_name) {  
         throw new Error("Missing required fields");
     }
     return await JoinSCCModel.createJoinSCC(data);
