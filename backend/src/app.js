@@ -7,6 +7,7 @@ import express from "express";
 import eventsRouter from "./routes/events.routes.js";
 import leadersRouter from "./routes/leaders.routes.js";
 import authRouter from "./routes/auth.routes.js";
+import joinSccRouter from "./routes/join-scc.routes.js";
 import groupsRouter from "./routes/joinGroup.routes.js";
 //import { errorHandler } from "./middleware/errorHandler.js";
 import cors from "cors";
@@ -18,6 +19,7 @@ app.use(express.json());
 app.use("/api", eventsRouter);
 app.use("/api", leadersRouter);
 app.use("/api", authRouter);
+app.use("/api", joinSccRouter);
 app.use("/api", groupsRouter);
 //app.use(errorHandler);
 
