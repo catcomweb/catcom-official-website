@@ -75,10 +75,24 @@ CREATE TABLE executive_leaders (
 );
 
 CREATE TABLE users (
-  user_id SERIAL PRIMARY KEY,
+  id SERIAL PRIMARY KEY,
   full_name VARCHAR(100) NOT NULL,  
-  role VARCHAR(50),
+  role VARCHAR(50) DEFAULT 'user',
   email VARCHAR(100) UNIQUE NOT NULL,
   password TEXT NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE refresh_tokens (
+  id SERIAL PRIMARY KEY,
+  user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  token TEXT NOT NULL UNIQUE,
+  expires_at TIMESTAMP NOT NULL,
+  revoked BOOLEAN DEFAULT false,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
+CREATE INDEX idx_refresh_tokens_user_id ON refresh_tokens(user_id);
+CREATE INDEX idx_refresh_tokens_token ON refresh_tokens(token);
+

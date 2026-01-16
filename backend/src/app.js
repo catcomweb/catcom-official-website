@@ -9,6 +9,8 @@ import leadersRouter from "./routes/leaders.routes.js";
 import authRouter from "./routes/auth.routes.js";
 import joinSccRouter from "./routes/join-scc.routes.js";
 import groupsRouter from "./routes/joinGroup.routes.js";
+import readingsRouter from './routes/readings.routes.js';
+
 //import { errorHandler } from "./middleware/errorHandler.js";
 import cors from "cors";
 
@@ -21,6 +23,6 @@ app.use("/api", leadersRouter);
 app.use("/api", authRouter);
 app.use("/api", joinSccRouter);
 app.use("/api", groupsRouter);
-//app.use(errorHandler);
+app.use("/api", readingsRouter);
 
 export default app;

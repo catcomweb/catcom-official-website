@@ -5,16 +5,31 @@ export const register = async (userData) => {
     return await authModel.register(userData);
 };
 
-export const login = async (credentials) => {
+export const login = async (email, password) => {
+    const credentials = { email, password };
     validateUserData(credentials, ['email', 'password']);
     return await authModel.login(credentials);
 };
 
-export const refresh = async (refreshToken) => {
+export const refreshTokens = async (refreshToken) => {
     if (!refreshToken) {
         throw new Error("No refresh token provided");
     }
     return await authModel.refreshToken(refreshToken);
+};
+
+export const logout = async (refreshToken) => {
+    if (!refreshToken) {
+        throw new Error("No refresh token provided");
+    }
+    return await authModel.revokeToken(refreshToken);
+};
+
+export const getUserProfile = async (userId) => {
+    if (!userId) {
+        throw new Error("User ID is required");
+    }
+    return await authModel.getUserById(userId);
 };
 
 const validateUserData = (data, requiredFields) => {
