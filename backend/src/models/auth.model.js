@@ -2,15 +2,15 @@ import db from "../config/db.config.js";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 
-const JWT_SECRET = process.env.JWT_SECRET || "your-secret-key-change-in-production";
-const JWT_REFRESH_SECRET = process.env.JWT_REFRESH_SECRET || "your-refresh-secret-key-change-in-production";
-const JWT_EXPIRES_IN = process.env.JWT_EXPIRES_IN || "15m";
-const JWT_REFRESH_EXPIRES_IN = process.env.JWT_REFRESH_EXPIRES_IN || "7d";
+const JWT_SECRET = process.env.JWT_SECRET 
+const JWT_REFRESH_SECRET = process.env.JWT_REFRESH_SECRET;
+const JWT_EXPIRES_IN = process.env.JWT_EXPIRES_IN;
+const JWT_REFRESH_EXPIRES_IN = process.env.JWT_REFRESH_EXPIRES_IN;
 
 export const register = async (data) => {
     const { full_name, email, password, role } = data; 
     
-    // Check if user already exists
+    // check if user already exists
     const checkQuery = 'SELECT * FROM users WHERE email = $1';
     const existingUser = await db.query(checkQuery, [email]);
     
@@ -30,11 +30,11 @@ export const register = async (data) => {
     
     const user = result.rows[0];
     
-    // Generate tokens
+    //tokens
     const accessToken = generateAccessToken(user);
     const refreshToken = generateRefreshToken(user);
     
-    // Store refresh token in database
+    // store refresh token
     await storeRefreshToken(user.id, refreshToken);
 
     return {
@@ -67,11 +67,11 @@ export const login = async (credentials) => {
         throw new Error('Invalid email or password');
     }
     
-    // Generate tokens
+    // generate tokens
     const accessToken = generateAccessToken(user);
     const refreshToken = generateRefreshToken(user);
     
-    // Store refresh token in database
+    // store refresh token
     await storeRefreshToken(user.id, refreshToken);
     
     return {
