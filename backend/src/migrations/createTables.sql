@@ -45,16 +45,15 @@ create table join_scc (
     scc_name varchar(100) not null
 );
 
-create table scc_execut (
+create table scc_executive (
     exec_id SERIAL PRIMARY KEY,
-    
+	  scc_name varchar(50),
     exec_first_name varchar(50) not null,
     exec_last_name varchar(50) not null,
     position varchar(50) not null,
     phone_number varchar(15),
     exec_image varchar(255)
 );
-
 
 CREATE TABLE groups (
     user_id SERIAL PRIMARY KEY,

@@ -8,7 +8,7 @@ import eventsRouter from "./routes/events.routes.js";
 import leadersRouter from "./routes/leaders.routes.js";
 import authRouter from "./routes/auth.routes.js";
 import joinSccRouter from "./routes/join-scc.routes.js"
-import sccLeadersRouter from "./routes/sccleaders.routes.js"
+import sccLeadersRouter from "./routes/scc-leaders.routes.js"
 import groupsRouter from "./routes/joinGroup.routes.js";
 import readingsRouter from './routes/readings.routes.js';
 

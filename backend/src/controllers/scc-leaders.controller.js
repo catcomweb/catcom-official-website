@@ -2,8 +2,9 @@
 import { getsccLeadersServices as getsccLeader, createsccLeadersServices as createsccLeader, deletesccLeadersServices as deletesccLeader } from "../services/sccleaders.service.js";
 
 const getsccLeaderController = async(req , res) =>{
+    const {scc_name} = req.params;
 try {
-     const leaders = await getsccLeader() ;
+     const leaders = await getsccLeader(scc_name) ;
      res.json(leaders);
      
      
@@ -25,8 +26,9 @@ try {
 const deletesccLeaderController = async(req,res) => {
 try {
     const {id} = req.params;
-    await deletesccLeader(id);
-    res.status(204).end();
+    const {scc_name} = req.params;
+    await deletesccLeader(id, scc_name);
+    res.status(204).json({ message: "SCC Leader deleted successfully" });
 } catch (error) {
     res.status(500).json({ message: "Server error: " + error.message });
 }
