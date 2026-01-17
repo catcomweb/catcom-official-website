@@ -47,6 +47,7 @@ create table join_scc (
 
 create table scc_execut (
     exec_id SERIAL PRIMARY KEY,
+    
     exec_first_name varchar(50) not null,
     exec_last_name varchar(50) not null,
     position varchar(50) not null,
