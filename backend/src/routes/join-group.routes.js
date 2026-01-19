@@ -1,5 +1,5 @@
 import {Router} from 'express';
-import joinGroupsController from "../controllers/join-roup.controller.js";
+import joinGroupsController from "../controllers/join-group.controller.js";
 
 const router = Router();
 
