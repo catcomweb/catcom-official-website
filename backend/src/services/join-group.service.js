@@ -1,4 +1,4 @@
-import * as joinGroupModel from "../models/joinGroup.model.js";
+import * as joinGroupModel from "../models/join-group.model.js";
 
 export const createJoinGroupsServices = async (data) => {
     if (!data) {
