@@ -6792,7 +6792,77 @@
     ],
     "title": "Monday of the Sixteenth Week in Ordinary Time",
     "url": "https://bible.usccb.org/bible/readings/072026.cfm"
-  },
+  },{
+  "date": "2026-07-21",
+  "sections": [
+    {
+      "header": "Reading 1",
+      "readings": [
+        {
+          "text": "Shepherd your people with your staff, the flock of your inheritance, That dwells apart in a woodland, in the midst of Carmel. Let them feed in Bashan and Gilead, as in the days of old; As in the days when you came from the land of Egypt, show us wonderful signs. Who is there like you, the God who removes guilt and pardons sin for the remnant of his inheritance; Who does not persist in anger forever, but delights rather in clemency, And will again have compassion on us, treading underfoot our guilt? You will cast into the depths of the sea all our sins; You will show faithfulness to Jacob, and grace to Abraham, As you have sworn to our fathers from days of old.",
+          "verses": [
+            {
+              "book": "Micah",
+              "link": "https://bible.usccb.org/bible/micah/7?14",
+              "text": "Micah 7:14-15, 18-20"
+            }
+          ]
+        }
+      ],
+      "type": "READING"
+    },
+    {
+      "header": "Responsorial Psalm",
+      "readings": [
+        {
+          "text": "R. (8a) Lord, show us your mercy and love. You have favored, O LORD, your land; you have brought back the captives of Jacob. You have forgiven the guilt of your people; you have covered all their sins. You have withdrawn all your wrath; you have revoked your burning anger. R. Lord, show us your mercy and love. Restore us, O God our savior, and abandon your displeasure against us. Will you be ever angry with us, prolonging your anger to all generations? R. Lord, show us your mercy and love. Will you not instead give us life; and shall not your people rejoice in you? Show us, O LORD, your kindness, and grant us your salvation. R. Lord, show us your mercy and love.",
+          "verses": [
+            {
+              "book": "Psalms",
+              "link": "https://bible.usccb.org/bible/psalms/85?2",
+              "text": "Psalm 85:2-4, 5-6, 7-8"
+            }
+          ]
+        }
+      ],
+      "type": "PSALM"
+    },
+    {
+      "header": "Alleluia",
+      "readings": [
+        {
+          "text": "R. Alleluia, alleluia. Whoever loves me will keep my word, and my Father will love him and we will come to him. R. Alleluia, alleluia.",
+          "verses": [
+            {
+              "book": "John",
+              "link": "https://bible.usccb.org/bible/john/14?23",
+              "text": "John 14:23"
+            }
+          ]
+        }
+      ],
+      "type": "ALLELUIA"
+    },
+    {
+      "header": "Gospel",
+      "readings": [
+        {
+          "text": "While Jesus was speaking to the crowds, his mother and his brothers appeared outside, wishing to speak with him. Someone told him, \"Your mother and your brothers are standing outside, asking to speak with you.\" But he said in reply to the one who told him, \"Who is my mother? Who are my brothers?\" And stretching out his hand toward his disciples, he said, \"Here are my mother and my brothers. For whoever does the will of my heavenly Father is my brother, and sister, and mother.\"",
+          "verses": [
+            {
+              "book": "Matthew",
+              "link": "https://bible.usccb.org/bible/matthew/12?46",
+              "text": "Matthew 12:46-50"
+            }
+          ]
+        }
+      ],
+      "type": "GOSPEL"
+    }
+  ],
+  "title": "Tuesday of the Sixteenth Week in Ordinary Time",
+  "url": "https://bible.usccb.org/bible/readings/072126.cfm"
+},
   {
     "date": "2026-07-26",
     "sections": [
